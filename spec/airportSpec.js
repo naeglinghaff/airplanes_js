@@ -1,9 +1,13 @@
-describe('Airport', function(){
+describe('Airport', () => {
+
   var airport;
-  beforeEach(function(){
+
+  beforeEach( () => {
     airport = new Airport();
   });
-  it('has no planes', function(){
-    expect(airport.hangar()).toEqual([]);
+
+  it('has no planes by default', () => {
+    expect(airport.planes()).toEqual([]);
   });
+
 });

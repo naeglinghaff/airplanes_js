@@ -1,8 +1,15 @@
-let Plane = function (){
-  this.landed = false
-}
+class Plane {
+  constructor(){
+    this.landed = false;
+  }
 
-Plane.prototype.land = function(airport){
-  this.landed = true;
-  airport.land(this);
-};
+  land(airport) {
+    this.landed = true;
+    airport.land(this);
+  }
+
+  takeOff(airport) {
+    this.landed = false;
+    airport.takeOff(this);
+  }
+}
